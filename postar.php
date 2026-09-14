@@ -1,14 +1,24 @@
 <?php
-require 'db.php';
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $imagem_url = $_POST['imagem_url'] ?? '';
-    $legenda = $_POST['legenda'] ?? '';
-    $usuario_id = 1; 
-
+    $imagem_url = trim($_POST['imagem_url']);
+    $legenda = trim($_POST['legenda']);
+    
     if (!empty($imagem_url)) {
-        $stmt = $pdo->prepare("INSERT INTO posts (usuario_id, imagem_url, legenda) VALUES (?, ?, ?)");
-        $stmt->execute([$usuario_id, $imagem_url, $legenda]);
+        $novoPost = [
+            'id' => time(), 
+            'nome_usuario' => 'carlinho_admin',
+            'foto_perfil' => 'https://via.placeholder.com/150/333333/FFFFFF?text=Admin',
+            'imagem_url' => $imagem_url,
+            'legenda' => $legenda,
+            'curtidas' => 0,
+            'data_criacao' => date('Y-m-d H:i:s')
+        ];
+
+        $arquivo = 'posts.json';
+        $posts = file_exists($arquivo) ? json_decode(file_get_contents($arquivo), true) : [];
+        array_unshift($posts, $novoPost);
+        file_put_contents($arquivo, json_encode($posts, JSON_PRETTY_PRINT));
+        
         header("Location: index.php");
         exit;
     }
