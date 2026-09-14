@@ -1,4 +1,4 @@
-# Carlinho Conexões 
+# Carlinho-Conexoes 
 
 A simplified Instagram-clone web application built for educational purposes. It focuses on core CRUD mechanics, asynchronous UI updates via Fetch API, and responsive web design.
 
