@@ -19,7 +19,7 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
     <header>
-        <img src="logo.png" alt="Logo Carlinho Conexões" class="logo">
+        <img src="logo.jpg" alt="Logo Carlinho Conexões" class="logo">
     </header>
 
     <main>
