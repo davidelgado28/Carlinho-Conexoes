@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+header {
+    background-color: #121212;
+    border-bottom: 1px solid #262626;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.logo {
+    height: 40px; 
+}
+
+main {
+    max-width: 600px; 
+    margin: 80px auto 20px auto; 
+    padding: 0 15px;
+}
+
+.post-card {
+    background-color: #121212;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.post-header img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #262626;
+}
+
+.post-header span {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.post-image {
+    width: 100%;
+    display: block;
+}
+
+.post-footer {
+    padding: 12px;
+}
+
+.btn-curtir {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-curtir:active {
+    transform: scale(0.8);
+}
+
+.icone-coracao.curtido {
+    color: #ff3040; 
+}
+
+.contador-curtidas {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.post-legenda {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #e0e0e0;
+}
+
+.btn-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0095f6;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.form-container {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #262626;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #a8a8a8;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
