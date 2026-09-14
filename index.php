@@ -6,7 +6,8 @@ $sql = "SELECT p.id, p.imagem_url, p.legenda, p.curtidas, u.nome_usuario, u.foto
         JOIN usuarios u ON p.usuario_id = u.id 
         ORDER BY p.data_criacao DESC";
 $stmt = $pdo->query($sql);
-$posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$arquivo = 'posts.json';
+$posts = file_exists($arquivo) ? json_decode(file_get_contents($arquivo), true) : [];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
