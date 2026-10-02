@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="topo">
-    <a href="/index.php" class="logo">🔗 Carlinho-Conexões</a>
+    <a href="/index.php" class="logo">Carlinho-Conexões</a>
     <nav>
         <?php if ($u = usuario_logado()): ?>
             <a href="/perfil.php?id=<?= (int)$u['id'] ?>">Meu perfil</a>
