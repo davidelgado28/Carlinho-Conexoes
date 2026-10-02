@@ -26,7 +26,7 @@ require __DIR__ . '/../includes/header.php';
 <?php require __DIR__ . '/../posts/criar.php'; ?>
 
 <?php if (!$posts): ?>
-    <p class="vazio">Nenhum post ainda. Seja o primeiro! ✨</p>
+    <p class="vazio">Nenhum post ainda. Seja o primeiro!</p>
 <?php endif; ?>
 
 <?php foreach ($posts as
