@@ -26,9 +26,17 @@ require __DIR__ . '/../includes/header.php';
 <?php require __DIR__ . '/../posts/criar.php'; ?>
 
 <?php if (!$posts): ?>
-    <p class="vazio">Nenhum post ainda. Seja o primeiro!</p>
+    <p class="vazio">Nenhum post ainda. Seja o primeiro! </p>
 <?php endif; ?>
 
-<?php foreach ($posts as
-
-> The response reached the length limit. Reply **continue** to get the rest.
+<?php foreach (postsasposts aspostsaspost): ?>
+<article class="post">
+    <div class="post-cabecalho">
+        <a href="/perfil.php?id=<?= (int)$post['autor_id'] ?>">
+            <strong>@<?= e($post['nome_usuario']) ?></strong>
+        </a>
+        <time><?= e(date('d/m/Y H:i', strtotime($post['criado_em']))) ?></time>
+    </div>
+    <p class="post-conteudo"><?= e($post['conteudo']) ?></p>
+    <div class="post-acoes">
+        <form method="POST" action="/acoes/curtir.php" class
